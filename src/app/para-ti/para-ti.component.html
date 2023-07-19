@@ -1,0 +1,43 @@
+<div class="contenedor">
+    <div class="contenido">
+        <div class="eternals">
+            <img [src]="eternals.imgTitulo" alt="">
+        </div>
+        <h3 class="imax">{{eternals.imax}}</h3>
+        <h5 class="info">Más información en <a [href]="eternals.info" class="a_info">{{eternals.info}}</a></h5>
+        <div class="tags">
+            <div class="tag">
+                <img [src]="eternals.edad_tag" alt="" class="doce">
+            </div>
+            <div class="tag">
+                <img [src]="eternals.imax_tag" alt="" class="imax">
+            </div>
+            <div class="tag">
+                <img [src]="eternals.ad" alt="" class="ad">
+            </div>
+            <div class="tag">
+            <h5 class="anio">{{eternals.anio}} · {{eternals.duracion}}</h5>
+            </div>       
+        </div>
+        <div class="categorias">
+            <h5 *ngFor="let categoria of eternals.categorias" class="categoria">{{categoria}}</h5>
+        </div>
+        <div class="botones">
+            <div class="acciones">
+                <a class="enlace ver" href="{{eternals.enlaces[0]}}"><img src="/assets/imgs/play.png" alt=""><span>VER</span></a>
+                <a class="enlace trailer" href="{{eternals.enlaces[1]}}">TRÁILER</a>
+                <a class="accion lista" href="{{eternals.botones[0]}}"><img src="/assets/imgs/checked.png" alt=""></a>
+                <a class="accion grupo" href="{{eternals.botones[1]}}"><img src="/assets/imgs/group.png" alt=""></a>
+            </div>
+        </div>
+        <p class="descripcion">{{eternals.descripcion}}</p>
+        <div class="secciones">
+            <span *ngFor="let seccion of eternals.secciones; let i = index" class="seccion">{{seccion}}</span>
+        </div>
+        <div class="slider">
+            <div *ngFor="let imagen of eternals.imagenes; let i = index" class="img">
+                <img [src]="imagen" alt="">
+            </div>
+        </div>
+    </div>
+</div>
